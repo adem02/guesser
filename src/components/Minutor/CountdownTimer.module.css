@@ -1,0 +1,17 @@
+.countdown-timer {
+    border: 1px solid gray;
+    width: 80%;
+    min-width: 300px;
+    margin: auto;
+    padding: 2em 0;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+.countdown-timer span {
+    margin: 0 0.3em;
+}
+
+.buttons {
+    margin: 1em 0;
+}
