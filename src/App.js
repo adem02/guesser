@@ -1,5 +1,5 @@
 import './App.css';
-import Guesser from './components/Guesser';
+import Guesser from './components/Guesser/Guesser';
 
 function App() {
   return (

@@ -17,5 +17,10 @@ export const Auto = {
 
     getRes() {
         return this.res
+    },
+
+    reset() {
+        this.number = 0;
+        this.res = 1;
     }
 }

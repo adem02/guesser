@@ -1,10 +1,11 @@
 import React from 'react'
-import classes from './Guesser.module.css'
+import { Auto } from '../../utils/calcul'
+import classes from './DisplayOperation.module.css'
 
 
-const DisplayOperation = ({ operation, num }) => {
+const DisplayOperation = ({ operation, result }) => {
 
-    if (operation.action === "PENSER") {
+    if (operation === "PENSER") {
         return (
             <div className={classes.think}>
                 <p>Penses à un chiffre de 0 à 100</p>
@@ -12,7 +13,7 @@ const DisplayOperation = ({ operation, num }) => {
         )
     }
 
-    if (operation.action === "PLUS") {
+    if (operation === "PLUS") {
         return (
             <div className={classes.think}>
                 <p>Additionne le par lui même</p>
@@ -20,15 +21,16 @@ const DisplayOperation = ({ operation, num }) => {
             </div>
         )
     }
-    if (operation.action === 'FOIS') {
+    if (operation === 'FOIS') {
+        Auto.number = Math.floor(Math.random() * (99 - 2 + 1)) + 2;
         return (
             <div className={classes.think}>
-                <p>Multiplie le résultat que tu viens d'obtenir par {num}</p>
+                <p>Multiplie le résultat que tu viens d'obtenir par {Auto.number}</p>
                 <p>Exemple : Le résultat de l'exemple précedent étant 2 alors alors tu fais 2 * 5 qui donne 10 n'essaies pas de comprendre c'est du très haut niveau pour toi</p>
             </div>
         )
     }
-    if (operation.action === 'DIVISE') {
+    if (operation === 'DIVISE') {
         return (
             <div className={classes.think}>
                 <p>Divise le résultat que tu viens d'obtenir par le nombre au quel t'as pensé !</p>
@@ -37,14 +39,7 @@ const DisplayOperation = ({ operation, num }) => {
         )
     }
 
-    if (operation.action === 'RESULT') {
-        return (
-            <div className={classes.result}>
-                <p>Le résultat est :</p>
-                <p>10</p>
-            </div>
-        )
-    }
+    return null
 }
 
 export default DisplayOperation

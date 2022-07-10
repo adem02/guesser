@@ -3,12 +3,3 @@
     height: 90%;
     margin: auto auto;
 }
-
-.think {
-    width: 80%;
-    min-width: 300px;
-    margin: 0.5em auto;
-    background-color: rgb(83, 19, 83);
-    color: white;
-    padding: 1em 0;
-}
